@@ -17,7 +17,7 @@ struct Song {
         var songs: [Song] = []
         songs.append (Song(name: "Hư Không", fileName: "musicHuKhong", performer: "Kha", thumpNail: "musicHuKhong"))
         songs.append (Song(name: "Wrong time", fileName: "musicWrong", performer: "Puppy", thumpNail: "musicWrong"))
-        songs.append (Song(name: "Chuyện của chúng ta", fileName: "musicChuyen", performer: "Kha", thumpNail: "musicChuyen"))
+        songs.append (Song(name: "Chuyện của chúng ta", fileName: "musicChuyen", performer: "Erik", thumpNail: "musicChuyen"))
         songs.append (Song(name: "Những lời hứa bỏ quên", fileName: "musicHuKhong", performer: "Vũ", thumpNail: "musicNhung"))
         songs.append (Song(name: "Nghe em", fileName: "musicWrong", performer: "Thinh Suy", thumpNail: "musicNgheem"))
         songs.append (Song(name: "Bước qua nhau", fileName: "musicNhung", performer: "Vũ", thumpNail: "musicBuoc"))
