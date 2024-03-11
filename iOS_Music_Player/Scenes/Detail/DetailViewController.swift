@@ -10,7 +10,7 @@ import AVFoundation
 import MediaPlayer
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var titleDetailLabel: UILabel!
     @IBOutlet weak var performerDetailLabel: UILabel!
@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
     private var currentIndex = 0
     private var isPlaying = true
     private var timer: Timer?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configDetailSong()
@@ -30,7 +30,7 @@ class DetailViewController: UIViewController {
     
     private func configDetailSong () {
         guard let url = Bundle.main.url(forResource: songs[currentIndex].fileName, withExtension: "mp3") else {
-            print("File nhạc không tồn tại")
+            print("Music file does not exist")
             return
         }
         
@@ -39,11 +39,10 @@ class DetailViewController: UIViewController {
             try session.setMode(.default)
             try session.setActive(true, options: .notifyOthersOnDeactivation)
             
-            // Tạo và gán player
             player = try AVAudioPlayer(contentsOf: url)
             player?.play()
         } catch {
-            print("Lỗi khi phát nhạc: \(error)")
+            print("ERROR: \(error)")
         }
         
         // update UI
@@ -82,13 +81,13 @@ class DetailViewController: UIViewController {
             } else {
                 currentIndex = songs.count - 1
             }
-
+            
         default:
             break
         }
     }
     
-    func statusPlayPauseButton(button: UIButton) {
+    private func statusPlayPauseButton(button: UIButton) {
         guard let player = player else {
             return
         }
@@ -98,7 +97,7 @@ class DetailViewController: UIViewController {
         button.setImage(buttonImage, for: .normal)
     }
     
-    func setUpSlider(player: AVAudioPlayer?) {
+    private func setUpSlider(player: AVAudioPlayer?) {
         slider.maximumValue = Float(player?.duration ?? 0)
         slider.addTarget(self, action: #selector(didSlideSlider(_:)), for: .valueChanged)
         Timer.scheduledTimer(timeInterval: 0.0, target: self, selector: #selector(updateSlider), userInfo: nil, repeats: true)
@@ -148,7 +147,5 @@ class DetailViewController: UIViewController {
         statusPlayPauseButton(button: playButton)
         configDetailSong()
     }
-    
-    
 }
 
