@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mh3-pQ-674">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XJw-Ik-cPT">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Page View Controller-->
+        <!--Item-->
         <scene sceneID="kAr-a7-4to">
             <objects>
                 <viewController id="mHG-LL-Zc0" customClass="HomePageViewController" customModule="iOS_Music_Player" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="92C-Mb-n3Y">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -31,6 +31,7 @@
                             <constraint firstItem="92C-Mb-n3Y" firstAttribute="top" secondItem="zgT-0G-aXu" secondAttribute="top" id="sqX-Rh-ovO"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="YHf-je-YZ8"/>
                     <navigationItem key="navigationItem" id="0Ch-lF-GnL"/>
                     <connections>
                         <outlet property="tableView" destination="92C-Mb-n3Y" id="WDc-se-JYq"/>
@@ -151,14 +152,70 @@
             </objects>
             <point key="canvasLocation" x="1504.5801526717557" y="-19.014084507042256"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="X0t-fQ-SeA">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XJw-Ik-cPT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q21-RG-fEc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mh3-pQ-674" kind="relationship" relationship="viewControllers" id="hv0-hb-Mlc"/>
+                        <segue destination="h2c-KX-AOt" kind="relationship" relationship="viewControllers" id="bb6-OK-YaW"/>
+                        <segue destination="ZiX-XB-Etm" kind="relationship" relationship="viewControllers" id="Lr4-j2-C8I"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXV-ef-adG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1651" y="691"/>
+        </scene>
+        <!--Online-->
+        <scene sceneID="5di-JG-XaQ">
+            <objects>
+                <viewController id="h2c-KX-AOt" customClass="OnlineViewController" customModule="iOS_Music_Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TIE-95-byI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9kN-T9-1hW"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Online" image="globe.americas.fill" catalog="system" id="9cp-J3-IQd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mmk-r9-VRe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-469" y="691"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="rgk-mw-T6m">
+            <objects>
+                <viewController id="ZiX-XB-Etm" customClass="SettingViewController" customModule="iOS_Music_Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YbA-Bx-ahJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZOU-BC-XM5"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setting" image="gearshape.fill" catalog="system" id="spw-Ma-sLe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBq-ty-K4n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-469" y="1417"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="8w9-SS-o5X">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mh3-pQ-674" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="Jmn-Gg-bCH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Ux-A1-oV2">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -173,10 +230,19 @@
     <resources>
         <image name="backward.end.fill" catalog="system" width="128" height="101"/>
         <image name="forward.end.fill" catalog="system" width="128" height="101"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="globe.americas.fill" catalog="system" width="128" height="123"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="musicHuKhong" width="178" height="168"/>
         <image name="pauseButton" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
