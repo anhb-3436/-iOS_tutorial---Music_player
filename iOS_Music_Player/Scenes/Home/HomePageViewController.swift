@@ -57,6 +57,7 @@ extension HomePageViewController: UITableViewDelegate {
         
         // Transfers the data of the selected song into DetailViewController
         detailViewController.configSongs(songs: songs, index: indexPath.row)
+        detailViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
