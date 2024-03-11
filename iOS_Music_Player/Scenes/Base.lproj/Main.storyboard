@@ -69,19 +69,71 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YTQ-1J-7bG">
                                 <rect key="frame" x="14" y="588" width="365" height="31"/>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7W-sJ-Ru3">
+                                <rect key="frame" x="146.66666666666666" y="668" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="qSq-qP-JMP"/>
+                                    <constraint firstAttribute="width" constant="100" id="uYB-vH-QHz"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pauseButton">
+                                    <backgroundConfiguration key="background"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playPauseButtonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cEW-jx-dt3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3f1-a3-4LV">
+                                <rect key="frame" x="86.666666666666671" y="703" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="KPb-6a-wyx"/>
+                                    <constraint firstAttribute="height" constant="30" id="Whl-rf-BPz"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="backward.end.fill" catalog="system"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="previousButtonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8jM-qP-Kwz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPS-kK-L5h">
+                                <rect key="frame" x="276.66666666666669" y="703" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="UZg-MT-c6E"/>
+                                    <constraint firstAttribute="height" constant="30" id="d3S-kx-zLg"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="forward.end.fill" catalog="system"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="307-lf-pT4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Hg2-sP-2yh" firstAttribute="trailing" secondItem="Fik-qK-fkQ" secondAttribute="trailing" id="3eN-hg-brq"/>
                             <constraint firstItem="Hg2-sP-2yh" firstAttribute="top" secondItem="Fik-qK-fkQ" secondAttribute="bottom" constant="10" id="5hl-vN-tQ4"/>
+                            <constraint firstItem="d7W-sJ-Ru3" firstAttribute="leading" secondItem="3f1-a3-4LV" secondAttribute="trailing" constant="30" id="HcB-bP-YSb"/>
                             <constraint firstItem="YTQ-1J-7bG" firstAttribute="trailing" secondItem="Hg2-sP-2yh" secondAttribute="trailing" id="JTt-yr-pPG"/>
+                            <constraint firstItem="d7W-sJ-Ru3" firstAttribute="top" secondItem="YTQ-1J-7bG" secondAttribute="bottom" constant="50" id="LrE-3s-BmK"/>
+                            <constraint firstItem="d7W-sJ-Ru3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mk7-qb-wzk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FmW-L2-5a0" secondAttribute="trailing" constant="16" id="Rjf-uN-Lw3"/>
                             <constraint firstItem="Hg2-sP-2yh" firstAttribute="leading" secondItem="Fik-qK-fkQ" secondAttribute="leading" id="Tb5-LJ-CFe"/>
                             <constraint firstItem="YTQ-1J-7bG" firstAttribute="top" secondItem="Hg2-sP-2yh" secondAttribute="bottom" constant="20" id="UG7-Kr-bQc"/>
+                            <constraint firstItem="EPS-kK-L5h" firstAttribute="leading" secondItem="d7W-sJ-Ru3" secondAttribute="trailing" constant="30" id="ZBj-T2-Z6B"/>
+                            <constraint firstItem="3f1-a3-4LV" firstAttribute="centerY" secondItem="d7W-sJ-Ru3" secondAttribute="centerY" id="eTk-4S-zBF"/>
                             <constraint firstItem="YTQ-1J-7bG" firstAttribute="leading" secondItem="Hg2-sP-2yh" secondAttribute="leading" id="hZv-zf-aEQ"/>
                             <constraint firstItem="Fik-qK-fkQ" firstAttribute="leading" secondItem="FmW-L2-5a0" secondAttribute="leading" id="hec-je-s8R"/>
                             <constraint firstItem="Fik-qK-fkQ" firstAttribute="top" secondItem="FmW-L2-5a0" secondAttribute="bottom" constant="33" id="ppT-cf-G2s"/>
+                            <constraint firstItem="EPS-kK-L5h" firstAttribute="centerY" secondItem="d7W-sJ-Ru3" secondAttribute="centerY" id="toM-8g-g9M"/>
                             <constraint firstItem="FmW-L2-5a0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="twq-ze-DgE"/>
                             <constraint firstItem="FmW-L2-5a0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="wZE-VF-a8q"/>
                             <constraint firstItem="Fik-qK-fkQ" firstAttribute="trailing" secondItem="FmW-L2-5a0" secondAttribute="trailing" id="wrX-EC-bkg"/>
@@ -90,12 +142,14 @@
                     <connections>
                         <outlet property="detailImageView" destination="FmW-L2-5a0" id="jvW-Sh-5gi"/>
                         <outlet property="performerDetailLabel" destination="Hg2-sP-2yh" id="UKR-bw-s9s"/>
+                        <outlet property="playButton" destination="d7W-sJ-Ru3" id="lRV-0e-OMn"/>
+                        <outlet property="slider" destination="YTQ-1J-7bG" id="lJh-1C-sUz"/>
                         <outlet property="titleDetailLabel" destination="Fik-qK-fkQ" id="A9n-Q5-KI8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292.3664122137404" y="-19.014084507042256"/>
+            <point key="canvasLocation" x="1504.5801526717557" y="-19.014084507042256"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8w9-SS-o5X">
@@ -117,7 +171,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backward.end.fill" catalog="system" width="128" height="101"/>
+        <image name="forward.end.fill" catalog="system" width="128" height="101"/>
         <image name="musicHuKhong" width="178" height="168"/>
+        <image name="pauseButton" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -24,6 +24,12 @@
 		ECDDAB442B99903F0086E678 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDDAB432B99903F0086E678 /* HomePageViewController.swift */; };
 		ECDDAB482B99988F0086E678 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDDAB462B99988F0086E678 /* SongTableViewCell.swift */; };
 		ECDDAB492B99988F0086E678 /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDDAB472B99988F0086E678 /* SongTableViewCell.xib */; };
+		ECF500152B9AF38B002CE0AF /* chimSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECF5000F2B9AF38B002CE0AF /* chimSong.mp3 */; };
+		ECF500162B9AF38B002CE0AF /* cuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECF500102B9AF38B002CE0AF /* cuSong.mp3 */; };
+		ECF500172B9AF38B002CE0AF /* buocSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECF500112B9AF38B002CE0AF /* buocSong.mp3 */; };
+		ECF500182B9AF38B002CE0AF /* daiSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECF500122B9AF38B002CE0AF /* daiSong.mp3 */; };
+		ECF500192B9AF38B002CE0AF /* ngheSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECF500132B9AF38B002CE0AF /* ngheSong.mp3 */; };
+		ECF5001A2B9AF38B002CE0AF /* noiSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECF500142B9AF38B002CE0AF /* noiSong.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,12 @@
 		ECDDAB432B99903F0086E678 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		ECDDAB462B99988F0086E678 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		ECDDAB472B99988F0086E678 /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
+		ECF5000F2B9AF38B002CE0AF /* chimSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = chimSong.mp3; path = ../../../../Resources/Audio/chimSong.mp3; sourceTree = "<group>"; };
+		ECF500102B9AF38B002CE0AF /* cuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cuSong.mp3; path = ../../../../Resources/Audio/cuSong.mp3; sourceTree = "<group>"; };
+		ECF500112B9AF38B002CE0AF /* buocSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = buocSong.mp3; path = ../../../../Resources/Audio/buocSong.mp3; sourceTree = "<group>"; };
+		ECF500122B9AF38B002CE0AF /* daiSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = daiSong.mp3; path = ../../../../Resources/Audio/daiSong.mp3; sourceTree = "<group>"; };
+		ECF500132B9AF38B002CE0AF /* ngheSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ngheSong.mp3; path = ../../../../Resources/Audio/ngheSong.mp3; sourceTree = "<group>"; };
+		ECF500142B9AF38B002CE0AF /* noiSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = noiSong.mp3; path = ../../../../Resources/Audio/noiSong.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +201,12 @@
 		ECDDAB372B998C650086E678 /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				ECF500112B9AF38B002CE0AF /* buocSong.mp3 */,
+				ECF5000F2B9AF38B002CE0AF /* chimSong.mp3 */,
+				ECF500102B9AF38B002CE0AF /* cuSong.mp3 */,
+				ECF500122B9AF38B002CE0AF /* daiSong.mp3 */,
+				ECF500132B9AF38B002CE0AF /* ngheSong.mp3 */,
+				ECF500142B9AF38B002CE0AF /* noiSong.mp3 */,
 				ECDDAB3B2B998E5C0086E678 /* chuyenSong.mp3 */,
 				ECDDAB3C2B998E5C0086E678 /* nhungSong.mp3 */,
 				ECDDAB3A2B998E5C0086E678 /* wrongSong.mp3 */,
@@ -319,14 +337,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF5001A2B9AF38B002CE0AF /* noiSong.mp3 in Resources */,
 				ECDDAB492B99988F0086E678 /* SongTableViewCell.xib in Resources */,
 				ECDDAB392B998C7A0086E678 /* hukhongSong.mp3 in Resources */,
+				ECF500152B9AF38B002CE0AF /* chimSong.mp3 in Resources */,
+				ECF500162B9AF38B002CE0AF /* cuSong.mp3 in Resources */,
 				ECDDAB3D2B998E5C0086E678 /* wrongSong.mp3 in Resources */,
 				ECDDAB3F2B998E5C0086E678 /* nhungSong.mp3 in Resources */,
+				ECF500182B9AF38B002CE0AF /* daiSong.mp3 in Resources */,
 				ECD346FC2B9978BA0087D96E /* LaunchScreen.storyboard in Resources */,
 				ECDDAB3E2B998E5C0086E678 /* chuyenSong.mp3 in Resources */,
+				ECF500172B9AF38B002CE0AF /* buocSong.mp3 in Resources */,
 				ECD346F92B9978BA0087D96E /* Assets.xcassets in Resources */,
 				ECD346F72B9978B90087D96E /* Main.storyboard in Resources */,
+				ECF500192B9AF38B002CE0AF /* ngheSong.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
