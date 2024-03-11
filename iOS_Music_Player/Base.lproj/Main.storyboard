@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,57 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Music_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicHuKhong" translatesAutoresizingMaskIntoConstraints="NO" id="FmW-L2-5a0">
+                                <rect key="frame" x="16" y="119" width="361" height="352"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FmW-L2-5a0" secondAttribute="height" multiplier="163:159" id="tQU-OW-gQi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hư không" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fik-qK-fkQ">
+                                <rect key="frame" x="16" y="504" width="361" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hg2-sP-2yh">
+                                <rect key="frame" x="16" y="544" width="361" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YTQ-1J-7bG">
+                                <rect key="frame" x="14" y="588" width="365" height="31"/>
+                            </slider>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hg2-sP-2yh" firstAttribute="trailing" secondItem="Fik-qK-fkQ" secondAttribute="trailing" id="3eN-hg-brq"/>
+                            <constraint firstItem="Hg2-sP-2yh" firstAttribute="top" secondItem="Fik-qK-fkQ" secondAttribute="bottom" constant="10" id="5hl-vN-tQ4"/>
+                            <constraint firstItem="YTQ-1J-7bG" firstAttribute="trailing" secondItem="Hg2-sP-2yh" secondAttribute="trailing" id="JTt-yr-pPG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FmW-L2-5a0" secondAttribute="trailing" constant="16" id="Rjf-uN-Lw3"/>
+                            <constraint firstItem="Hg2-sP-2yh" firstAttribute="leading" secondItem="Fik-qK-fkQ" secondAttribute="leading" id="Tb5-LJ-CFe"/>
+                            <constraint firstItem="YTQ-1J-7bG" firstAttribute="top" secondItem="Hg2-sP-2yh" secondAttribute="bottom" constant="20" id="UG7-Kr-bQc"/>
+                            <constraint firstItem="YTQ-1J-7bG" firstAttribute="leading" secondItem="Hg2-sP-2yh" secondAttribute="leading" id="hZv-zf-aEQ"/>
+                            <constraint firstItem="Fik-qK-fkQ" firstAttribute="leading" secondItem="FmW-L2-5a0" secondAttribute="leading" id="hec-je-s8R"/>
+                            <constraint firstItem="Fik-qK-fkQ" firstAttribute="top" secondItem="FmW-L2-5a0" secondAttribute="bottom" constant="33" id="ppT-cf-G2s"/>
+                            <constraint firstItem="FmW-L2-5a0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="twq-ze-DgE"/>
+                            <constraint firstItem="FmW-L2-5a0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="wZE-VF-a8q"/>
+                            <constraint firstItem="Fik-qK-fkQ" firstAttribute="trailing" secondItem="FmW-L2-5a0" secondAttribute="trailing" id="wrX-EC-bkg"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="musicHuKhong" width="178" height="168"/>
+    </resources>
 </document>
