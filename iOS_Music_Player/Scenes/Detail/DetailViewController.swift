@@ -15,20 +15,24 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var performerDetailLabel: UILabel!
     
-    var selectedSong: Song?
+    private var songs = [Song]()
+    private var currentIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        showDetailSong()
+        configDetailSong()
     }
     
-    func showDetailSong () {
-        // Hiển thị thông tin của bài hát được chọn
-        if let song = selectedSong {
-            detailImageView.image = UIImage(named: song.thumpNail)
-            titleDetailLabel.text = song.name
-            performerDetailLabel.text = song.performer
-        }
+    private func configDetailSong () {
+        let currentSong = songs[currentIndex]
+        detailImageView.image = UIImage(named: currentSong.thumpNail)
+        titleDetailLabel.text = currentSong.name
+        performerDetailLabel.text = currentSong.performer
+    }
+    
+    func configSongs (songs: [Song], index: Int) {
+        self.songs = songs
+        self.currentIndex = index
     }
 
 

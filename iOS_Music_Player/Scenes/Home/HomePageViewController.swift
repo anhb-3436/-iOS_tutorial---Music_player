@@ -57,16 +57,15 @@ extension HomePageViewController: UITableViewDataSource {
 extension HomePageViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedSong = songs[indexPath.row]
-        //print (selectedSong)
         
         // Khởi tạo DetailViewController từ storyboard
-        if let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
-            print (selectedSong)
-            
-            // Truyền dữ liệu của bài hát được chọn vào DetailViewController
-            detailViewController.selectedSong = selectedSong
-            
-            present(detailViewController, animated: true, completion: nil)
-        }
+        guard let detailViewController = storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailViewController else {return}
+        print (selectedSong)
+        
+        // Truyền dữ liệu của bài hát được chọn vào DetailViewController
+        detailViewController.configSongs(songs: songs, index: indexPath.row)
+        navigationController?.pushViewController(detailViewController, animated: true)
+        
     }
 }
+
