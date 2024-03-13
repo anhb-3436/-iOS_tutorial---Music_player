@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EC3DCA682B9EF6530026481F /* OnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DCA672B9EF6530026481F /* OnlineViewController.swift */; };
 		EC3DCA6A2B9EF6620026481F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DCA692B9EF6620026481F /* SettingViewController.swift */; };
+		EC6DCFDF2BA193E6005571D4 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6DCFDE2BA193E6005571D4 /* Artist.swift */; };
 		ECD346F02B9978B90087D96E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD346EF2B9978B90087D96E /* AppDelegate.swift */; };
 		ECD346F22B9978B90087D96E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD346F12B9978B90087D96E /* SceneDelegate.swift */; };
 		ECD346F42B9978B90087D96E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD346F32B9978B90087D96E /* DetailViewController.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		EC3DCA672B9EF6530026481F /* OnlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineViewController.swift; sourceTree = "<group>"; };
 		EC3DCA692B9EF6620026481F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		EC6DCFDE2BA193E6005571D4 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		ECD346EC2B9978B90087D96E /* iOS_Music_Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Music_Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD346EF2B9978B90087D96E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD346F12B9978B90087D96E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				ECDDAB352B998AC40086E678 /* Song.swift */,
+				EC6DCFDE2BA193E6005571D4 /* Artist.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				ECDDAB482B99988F0086E678 /* SongTableViewCell.swift in Sources */,
 				EC3DCA682B9EF6530026481F /* OnlineViewController.swift in Sources */,
 				ECDDAB362B998AC40086E678 /* Song.swift in Sources */,
+				EC6DCFDF2BA193E6005571D4 /* Artist.swift in Sources */,
 				EC3DCA6A2B9EF6620026481F /* SettingViewController.swift in Sources */,
 				ECD346F42B9978B90087D96E /* DetailViewController.swift in Sources */,
 				ECD346F02B9978B90087D96E /* AppDelegate.swift in Sources */,
