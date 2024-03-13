@@ -26,6 +26,27 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configDetailSong()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        print("View will disappear B")
+        player?.stop()
+    }
+    
+    @objc func applicationDidEnterBackground() {
+        player?.pause()
+        statusPlayPauseButton(button: playButton)
+    }
+    
+    @objc func applicationWillEnterForeground() {
+        isPlaying = false
+        statusPlayPauseButton(button: playButton)
     }
     
     private func configDetailSong () {
