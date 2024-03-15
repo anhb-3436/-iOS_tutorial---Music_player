@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC3DCA682B9EF6530026481F /* OnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DCA672B9EF6530026481F /* OnlineViewController.swift */; };
-		EC3DCA6A2B9EF6620026481F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DCA692B9EF6620026481F /* SettingViewController.swift */; };
+		EC3DCA6A2B9EF6620026481F /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DCA692B9EF6620026481F /* NoteViewController.swift */; };
 		EC6DCFDF2BA193E6005571D4 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6DCFDE2BA193E6005571D4 /* Artist.swift */; };
 		ECD346F02B9978B90087D96E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD346EF2B9978B90087D96E /* AppDelegate.swift */; };
 		ECD346F22B9978B90087D96E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD346F12B9978B90087D96E /* SceneDelegate.swift */; };
@@ -19,6 +19,10 @@
 		ECD347072B9978BA0087D96E /* iOS_Music_PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD347062B9978BA0087D96E /* iOS_Music_PlayerTests.swift */; };
 		ECD347112B9978BA0087D96E /* iOS_Music_PlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD347102B9978BA0087D96E /* iOS_Music_PlayerUITests.swift */; };
 		ECD347132B9978BA0087D96E /* iOS_Music_PlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD347122B9978BA0087D96E /* iOS_Music_PlayerUITestsLaunchTests.swift */; };
+		ECD52D482BA42CDA00AB660D /* NoteCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECD52D462BA42CDA00AB660D /* NoteCoreData.xcdatamodeld */; };
+		ECD52D4E2BA42E1700AB660D /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD52D4C2BA42E1700AB660D /* NoteTableViewCell.swift */; };
+		ECD52D4F2BA42E1700AB660D /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECD52D4D2BA42E1700AB660D /* NoteTableViewCell.xib */; };
+		ECD52D532BA430B900AB660D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD52D522BA430B900AB660D /* CoreDataManager.swift */; };
 		ECDDAB362B998AC40086E678 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDDAB352B998AC40086E678 /* Song.swift */; };
 		ECDDAB392B998C7A0086E678 /* hukhongSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECDDAB382B998C7A0086E678 /* hukhongSong.mp3 */; };
 		ECDDAB3D2B998E5C0086E678 /* wrongSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECDDAB3A2B998E5C0086E678 /* wrongSong.mp3 */; };
@@ -54,7 +58,7 @@
 
 /* Begin PBXFileReference section */
 		EC3DCA672B9EF6530026481F /* OnlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineViewController.swift; sourceTree = "<group>"; };
-		EC3DCA692B9EF6620026481F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		EC3DCA692B9EF6620026481F /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		EC6DCFDE2BA193E6005571D4 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		ECD346EC2B9978B90087D96E /* iOS_Music_Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Music_Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD346EF2B9978B90087D96E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,10 @@
 		ECD3470C2B9978BA0087D96E /* iOS_Music_PlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_Music_PlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD347102B9978BA0087D96E /* iOS_Music_PlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Music_PlayerUITests.swift; sourceTree = "<group>"; };
 		ECD347122B9978BA0087D96E /* iOS_Music_PlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Music_PlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ECD52D472BA42CDA00AB660D /* NoteCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteCoreData.xcdatamodel; sourceTree = "<group>"; };
+		ECD52D4C2BA42E1700AB660D /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		ECD52D4D2BA42E1700AB660D /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
+		ECD52D522BA430B900AB660D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		ECDDAB352B998AC40086E678 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		ECDDAB382B998C7A0086E678 /* hukhongSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hukhongSong.mp3; path = ../../../../Resources/Audio/hukhongSong.mp3; sourceTree = "<group>"; };
 		ECDDAB3A2B998E5C0086E678 /* wrongSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wrongSong.mp3; path = ../../../../Resources/Audio/wrongSong.mp3; sourceTree = "<group>"; };
@@ -118,12 +126,13 @@
 			path = Online;
 			sourceTree = "<group>";
 		};
-		EC0D3F652B9EF1BA00465024 /* Setting */ = {
+		EC0D3F652B9EF1BA00465024 /* Note */ = {
 			isa = PBXGroup;
 			children = (
-				EC3DCA692B9EF6620026481F /* SettingViewController.swift */,
+				ECD52D492BA42DE600AB660D /* Cell */,
+				EC3DCA692B9EF6620026481F /* NoteViewController.swift */,
 			);
-			path = Setting;
+			path = Note;
 			sourceTree = "<group>";
 		};
 		ECD346E32B9978B90087D96E = {
@@ -149,6 +158,7 @@
 		ECD346EE2B9978B90087D96E /* iOS_Music_Player */ = {
 			isa = PBXGroup;
 			children = (
+				ECD52D452BA42CC800AB660D /* CoreData */,
 				ECD346FD2B9978BA0087D96E /* Info.plist */,
 				ECD347242B998A680087D96E /* Models */,
 				ECD3471F2B9987E80087D96E /* Scenes */,
@@ -178,7 +188,7 @@
 		ECD3471F2B9987E80087D96E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				EC0D3F652B9EF1BA00465024 /* Setting */,
+				EC0D3F652B9EF1BA00465024 /* Note */,
 				EC0D3F642B9EF1A200465024 /* Online */,
 				ECDDAB402B998FDB0086E678 /* Home */,
 				ECD346F52B9978B90087D96E /* Main.storyboard */,
@@ -220,6 +230,24 @@
 				EC6DCFDE2BA193E6005571D4 /* Artist.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		ECD52D452BA42CC800AB660D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				ECD52D462BA42CDA00AB660D /* NoteCoreData.xcdatamodeld */,
+				ECD52D522BA430B900AB660D /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		ECD52D492BA42DE600AB660D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ECD52D4C2BA42E1700AB660D /* NoteTableViewCell.swift */,
+				ECD52D4D2BA42E1700AB660D /* NoteTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		ECDDAB372B998C650086E678 /* audio */ = {
@@ -365,6 +393,7 @@
 				ECF5001A2B9AF38B002CE0AF /* noiSong.mp3 in Resources */,
 				ECDDAB492B99988F0086E678 /* SongTableViewCell.xib in Resources */,
 				ECDDAB392B998C7A0086E678 /* hukhongSong.mp3 in Resources */,
+				ECD52D4F2BA42E1700AB660D /* NoteTableViewCell.xib in Resources */,
 				ECF500152B9AF38B002CE0AF /* chimSong.mp3 in Resources */,
 				ECF500162B9AF38B002CE0AF /* cuSong.mp3 in Resources */,
 				ECDDAB3D2B998E5C0086E678 /* wrongSong.mp3 in Resources */,
@@ -404,11 +433,14 @@
 				EC3DCA682B9EF6530026481F /* OnlineViewController.swift in Sources */,
 				ECDDAB362B998AC40086E678 /* Song.swift in Sources */,
 				EC6DCFDF2BA193E6005571D4 /* Artist.swift in Sources */,
-				EC3DCA6A2B9EF6620026481F /* SettingViewController.swift in Sources */,
+				EC3DCA6A2B9EF6620026481F /* NoteViewController.swift in Sources */,
 				ECD346F42B9978B90087D96E /* DetailViewController.swift in Sources */,
+				ECD52D532BA430B900AB660D /* CoreDataManager.swift in Sources */,
 				ECD346F02B9978B90087D96E /* AppDelegate.swift in Sources */,
 				ECDDAB442B99903F0086E678 /* HomePageViewController.swift in Sources */,
+				ECD52D482BA42CDA00AB660D /* NoteCoreData.xcdatamodeld in Sources */,
 				ECD346F22B9978B90087D96E /* SceneDelegate.swift in Sources */,
+				ECD52D4E2BA42E1700AB660D /* NoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,6 +789,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ECD52D462BA42CDA00AB660D /* NoteCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ECD52D472BA42CDA00AB660D /* NoteCoreData.xcdatamodel */,
+			);
+			currentVersion = ECD52D472BA42CDA00AB660D /* NoteCoreData.xcdatamodel */;
+			path = NoteCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ECD346E42B9978B90087D96E /* Project object */;
 }

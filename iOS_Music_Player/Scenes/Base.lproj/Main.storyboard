@@ -225,17 +225,79 @@
             </objects>
             <point key="canvasLocation" x="-469" y="691"/>
         </scene>
-        <!--Setting-->
+        <!--Note-->
         <scene sceneID="rgk-mw-T6m">
             <objects>
-                <viewController id="ZiX-XB-Etm" customClass="SettingViewController" customModule="iOS_Music_Player" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZiX-XB-Etm" customClass="NoteViewController" customModule="iOS_Music_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YbA-Bx-ahJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HNK-5e-2XV">
+                                <rect key="frame" x="0.0" y="58.999999999999986" width="393" height="177.66666666666663"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7K-h3-YGn">
+                                        <rect key="frame" x="283" y="48.666666666666671" width="80" height="80.000000000000014"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="2ax-xI-AVl"/>
+                                            <constraint firstAttribute="width" secondItem="j7K-h3-YGn" secondAttribute="height" multiplier="1:1" id="XGQ-Fn-vT9"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="ZiX-XB-Etm" eventType="touchUpInside" id="AVa-vl-G4U"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GnW-ra-RoQ">
+                                        <rect key="frame" x="20" y="49.666666666666671" width="243" height="78"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên ca sĩ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2tA-zt-Gku">
+                                                <rect key="frame" x="0.0" y="0.0" width="243" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên bài hát" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v13-Vx-8AK">
+                                                <rect key="frame" x="0.0" y="43.999999999999986" width="243" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="GnW-ra-RoQ" firstAttribute="centerY" secondItem="HNK-5e-2XV" secondAttribute="centerY" id="Zey-Ed-i1q"/>
+                                    <constraint firstAttribute="trailing" secondItem="j7K-h3-YGn" secondAttribute="trailing" constant="30" id="agy-nB-y1i"/>
+                                    <constraint firstItem="j7K-h3-YGn" firstAttribute="leading" secondItem="GnW-ra-RoQ" secondAttribute="trailing" constant="20" id="bAy-Wo-MgC"/>
+                                    <constraint firstItem="j7K-h3-YGn" firstAttribute="centerY" secondItem="HNK-5e-2XV" secondAttribute="centerY" id="jWt-yO-dh4"/>
+                                    <constraint firstItem="GnW-ra-RoQ" firstAttribute="leading" secondItem="HNK-5e-2XV" secondAttribute="leading" constant="20" id="xey-Ya-mcF"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wac-s9-hDT">
+                                <rect key="frame" x="0.0" y="236.66666666666669" width="393" height="532.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="labelColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZOU-BC-XM5"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZOU-BC-XM5" firstAttribute="trailing" secondItem="Wac-s9-hDT" secondAttribute="trailing" id="3jt-dX-myK"/>
+                            <constraint firstItem="ZOU-BC-XM5" firstAttribute="trailing" secondItem="HNK-5e-2XV" secondAttribute="trailing" id="KBC-IB-hZa"/>
+                            <constraint firstItem="HNK-5e-2XV" firstAttribute="leading" secondItem="ZOU-BC-XM5" secondAttribute="leading" id="S3X-5g-vw7"/>
+                            <constraint firstItem="Wac-s9-hDT" firstAttribute="top" secondItem="HNK-5e-2XV" secondAttribute="bottom" id="c7J-bK-KRQ"/>
+                            <constraint firstItem="Wac-s9-hDT" firstAttribute="height" secondItem="HNK-5e-2XV" secondAttribute="height" multiplier="3" id="jk9-Qd-3Jg"/>
+                            <constraint firstItem="Wac-s9-hDT" firstAttribute="leading" secondItem="ZOU-BC-XM5" secondAttribute="leading" id="o0H-Ed-E2J"/>
+                            <constraint firstItem="ZOU-BC-XM5" firstAttribute="bottom" secondItem="Wac-s9-hDT" secondAttribute="bottom" id="pj8-aa-Akx"/>
+                            <constraint firstItem="HNK-5e-2XV" firstAttribute="top" secondItem="ZOU-BC-XM5" secondAttribute="top" id="rqE-2x-RP7"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Setting" image="gearshape.fill" catalog="system" id="spw-Ma-sLe"/>
+                    <tabBarItem key="tabBarItem" title="Note" image="doc.text.fill" catalog="system" id="spw-Ma-sLe"/>
+                    <connections>
+                        <outlet property="nameSingerFill" destination="2tA-zt-Gku" id="4ad-DS-xd5"/>
+                        <outlet property="nameSongFill" destination="v13-Vx-8AK" id="Eri-Sz-65L"/>
+                        <outlet property="tableView" destination="Wac-s9-hDT" id="5LC-PB-3pn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBq-ty-K4n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,17 +327,17 @@
     </scenes>
     <resources>
         <image name="backward.end.fill" catalog="system" width="128" height="101"/>
+        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
         <image name="forward.end.fill" catalog="system" width="128" height="101"/>
-        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="musicHuKhong" width="178" height="168"/>
         <image name="pauseButton" width="50" height="50"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
